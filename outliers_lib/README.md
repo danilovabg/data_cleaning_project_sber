@@ -14,7 +14,7 @@ This section discusses statistical methods for finding outliers, namely:
 
 ### Method algorithm:
 
-1. Calculate the 25th and 75th quantiles (1st and 3rd quartiles) - $Q_{25}$ and $Q_{75}$ of thr examining frature
+1. Calculate the 25th and 75th quantiles (1st and 3rd quartiles) - $Q_{25}$ and $Q_{75}$ of the examined feature
 2. Calculate interquartile distance:
      * $IQR=Q_{75}-Q_{25}$
 3. Determine the upper and lower Tukey bounds:
@@ -25,7 +25,7 @@ This section discusses statistical methods for finding outliers, namely:
 4. Find observations that are out of bounds
 
 
-The method requires that the feature, on the basis of which the outlier search is performed, be normally distributed.
+The method requires that the feature, on the basis of which the outlier search is performed, should be normally distributed.
 
 We can try to use data transformation methods, as taking logarithms, to try to reduce the distribution to normal, or at least to symmetrical.
 
@@ -34,7 +34,7 @@ We also can add variability to the number of quartile ranges on the left and rig
 
 ## Z-score method (sigma method)
 
-The three sigma rule: if the data distribution is normal, then 99.73% lie in the interval: $(\mu-3 \sigma$ , $\mu+3 \sigma)$,
+The three sigma rule: if the data distribution is normal, then 99.73% of all observation lie in the interval: $(\mu-3 \sigma$ , $\mu+3 \sigma)$,
 where
 * $\mu$ - mathematical expectation (for the sample, this is the average value)
 * $\sigma$ - standard deviation.
@@ -52,7 +52,7 @@ Observations that lie outside this interval will be considered outliers.
 3. Find observations that are out of bounds
 
 
-The method requires that the feature, on the basis of which the outlier search is performed, be normally distributed.
+The method requires that the feature, on the basis of which the outlier search is performed, should be normally distributed.
 
 
 We can use data transformation methods, such as taking logarithms, to try to reduce the distribution to normal, or at least to symmetrical.
@@ -61,7 +61,7 @@ We can also add variance to the number of standard deviations to the left and ri
 
 ## Method Implementation
 
-The methods are implemented as find_outliers_iqr() and find_outliers_z_score() functions. The functions are provided in the find_outliers.py file. Documentation provided for functions.
+The methods are implemented as find_outliers_iqr() and find_outliers_z_score() functions. The functions are provided in the find_outliers.py file. Documentation is provided for functions.
 
 ## Usage example
 
